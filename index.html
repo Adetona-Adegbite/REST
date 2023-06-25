@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>REST</title>
+  </head>
+  <body>
+    <section class="intro">
+      <nav>
+        <ul>
+          <li><a href="">Meaning</a></li>
+          <li><a href="">Rules</a></li>
+          <li><a href="">Examples</a></li>
+        </ul>
+      </nav>
+      <div class="title">
+        <h1>REST?</h1>
+      </div>
+      <div class="bed">
+        <img src="bed.png" alt="" />
+      </div>
+    </section>
+    <section class="meaning">
+      <div class="def">
+        <h1>What is REST?</h1>
+      </div>
+      <div class="info">
+        <p>
+          <strong
+            >Basically, REST is an Architectural style for building API's. </strong
+          >REST stands for "Representational State Transfer." REST was
+          introduced by Roy Fielding in his 2000 doctoral dissertation titled
+          "Architectural Styles and the Design of Network-based Software
+          Architectures." Fielding played a significant role in developing the
+          HTTP protocol and was one of the principal authors of the HTTP/1.1
+          specification. REST separates the client and server, where the client
+          initiates requests, and the server responds to those requests.REST is
+          stateless, meaning that each request from a client to a server must
+          contain all the necessary information for the server to understand and
+          fulfill it.REST provides a uniform interface for communication between
+          clients and servers. This interface typically includes four primary
+          operations:
+          <li>
+            GET: Retrieves a representation of a resource from the server.
+          </li>
+          <li>POST:Sends data to the server to create a new resource.</li>
+          <li>DELETE:Deletes a resource on the server.</li>
+          <li>PUT: Updates or replaces an existing resource on the server.</li>
+          <li>PATCH: Updates a part of an existing resource on a server</li>
+        </p>
+      </div>
+    </section>
+    <section class="how">
+      <div class="t-head">
+        <h1>How to make your API RESTful</h1>
+      </div>
+      <div id="table-head">
+        <h2>
+          For an API to be RESTful it has must be able to carry out some
+          operations.
+        </h2>
+      </div>
+      <div class="table">
+        <table>
+          <thead>
+            <th>Operation / HTTP Verb</th>
+            <th>"webpage"/anime</th>
+            <th>"webpage"/anime/Attack-On-Titan</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Get</td>
+              <td>This is to Get all animes</td>
+              <td>This gets Attack on Titan</td>
+            </tr>
+            <tr>
+              <td>Post</td>
+              <td>This is to post/add a new anime</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>Put</td>
+              <td>-</td>
+              <td>This is to update all the data on attack on titan</td>
+            </tr>
+            <tr>
+              <td>Patch</td>
+              <td>-</td>
+              <td>This updates one or more attributes of attack on titan</td>
+            </tr>
+            <tr>
+              <td>Delete</td>
+              <td>This is to Delete all animes</td>
+              <td>This deletes the attack of titan anime</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <h1 id="improve">Improve your understanding with this illustration</h1>
+    <section class="example">
+      <form>
+        <label for="operation">Operation:</label>
+        <select id="operation" name="operation">
+          <option id="get" value="get">Get</option>
+          <option id="post" value="post">Post</option>
+          <option id="delete" value="delete">Delete</option>
+          <option id="put" value="put">Put</option>
+          <option id="patch" value="patch">Patch</option>
+        </select>
+        <label for="selection">Selection:</label>
+        <select id="selection" name="selection">
+          <option id="anime" value="anime">anime</option>
+          <option id="attack" value="attack-on-titan">
+            anime/attack-on-Titan
+          </option>
+        </select>
+        <input type="submit" value="Submit" onclick="getId(event)" />
+      </form>
+    </section>
+    <div id="result">
+      <p style="font-size: 1.5rem">Result:</p>
+      <br />
+      <p>This is going to show the result of what you have entered</p>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
